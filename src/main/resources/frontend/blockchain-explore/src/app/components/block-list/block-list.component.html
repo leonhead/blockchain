@@ -1,0 +1,17 @@
+<table class="table table-hover text-muted">
+	<thead>
+		<tr>
+			<th> Id </th>
+			<th> Hash </th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let block of blocks">
+			<td>{{block.id}} </td>
+			<td>{{block.hash}} </td>
+		</tr>
+	
+	</tbody>
+
+</table>
