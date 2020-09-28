@@ -1,15 +1,17 @@
 <table class="table table-hover text-muted">
 	<thead>
 		<tr>
-			<th> Id </th>
 			<th> Hash </th>
+			<th> Previous Block </th>
+			<th> Next Block </th>
 		</tr>
 	</thead>
 
 	<tbody>
 		<tr *ngFor="let block of blocks">
-			<td>{{block.id}} </td>
 			<td>{{block.hash}} </td>
+			<td>{{block.prevBlock}} </td>
+			<td>{{block.nextBlock}} </td>
 		</tr>
 	
 	</tbody>

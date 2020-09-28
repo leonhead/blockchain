@@ -1,6 +1,7 @@
 export class Block {
 	
-	id: number;
 	hash: string;
+	nextBlock: string;
+	prevBlock: string;
 	
 	}
