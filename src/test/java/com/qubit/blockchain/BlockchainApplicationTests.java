@@ -39,9 +39,7 @@ class BlockchainApplicationTests {
 
 	private List<Block> createBlocks() {
 		Block block1 = new Block("h45h");
-		block1.setId(1l);
 		Block block2 = new Block("h4xx");
-		block2.setId(2l);
 		List<Block> blocks = Stream.of(block1, block2).collect(Collectors.toList());
 		return blocks;
 	}

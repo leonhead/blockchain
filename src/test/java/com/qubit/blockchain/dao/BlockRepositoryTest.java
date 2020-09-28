@@ -26,9 +26,7 @@ public class BlockRepositoryTest {
 
 	private void pesist() {
 		Block block1 = new Block("h45h");
-		block1.setId(1l);
 		Block block2 = new Block("h4xx");
-		block2.setId(2l);
 		
 		blockRepository.save(block1);
 		blockRepository.save(block2);
