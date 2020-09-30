@@ -8,12 +8,17 @@ import { HttpClient } from '@angular/common/http';
 })
 export class BlockService {
 
-	private blockUrl = 'http://localhost:8080/blocks/list';
+	private blockUrl = 'http://localhost:8080/api/blocks';
 
 	constructor(private httpClient: HttpClient) { }
 
 
 	getBlocks(): Observable<Block[]> {
 		return this.httpClient.get<Block[]>(this.blockUrl);
+	}
+	
+	getBlock(hash: string):Observable<Block>{
+		const blockDetailsUrl = `${this.blockUrl}/${hash}`;
+		return this.httpClient.get<Block>(blockDetailsUrl);
 	}
 }

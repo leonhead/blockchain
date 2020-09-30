@@ -5,16 +5,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BlockListComponent } from './components/block-list/block-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TransactionListComponent } from './components/transaction-list/transaction-list.component';
+import { BlockDetailsComponent } from './components/block-details/block-details.component';
 
 
 const routes: Routes = [
-	{ path: 'blocks', component: BlockListComponent }
+	{ path: 'blocks', component: BlockListComponent },
+	{ path: 'blocks/:hash', component: BlockDetailsComponent },
+	{ path: 'transactions', component: TransactionListComponent },
+	{ path: 'transactions/search/:keyword', component: TransactionListComponent },
 	]
 
 @NgModule({
   declarations: [
     AppComponent,
-    BlockListComponent
+    BlockListComponent,
+    TransactionListComponent,
+    BlockDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,14 @@
+<div class="card mb-4 shadow-sm">
+	<div class="card-header">
+		<h4 class="my-0 font-weight-normal">Block</h4>
+	</div>
+	<div class="card-body">
+		<small class="text-muted">{{block.hash}}</small>
+		<ul class="list-unstyled mt-3 mb-4">
+			<li><small class="text-muted">Height: {{block.height}}</small></li>
+			<li><small class="text-muted">Weigth: {{block.weight}}</small></li>
+		</ul>
+		<button type="button" class="btn btn-lg btn-block btn-outline-primary"
+			[routerLink]="['/transactions/search/', block.hash]">Transactions</button>
+	</div>
+</div>

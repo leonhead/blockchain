@@ -8,7 +8,7 @@
 	</thead>
 
 	<tbody>
-		<tr *ngFor="let block of blocks">
+		<tr class="clickable" *ngFor="let block of blocks" [routerLink] = "['/blocks/', block.hash]">
 			<td>{{block.hash}} </td>
 			<td>{{block.prevBlock}} </td>
 			<td>{{block.nextBlock}} </td>
