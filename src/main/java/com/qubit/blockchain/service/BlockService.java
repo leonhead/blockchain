@@ -8,4 +8,6 @@ public interface BlockService {
 	
 	public List<Block> getBlocks();
 
+	public Block getBlockByHash(String hash);
+
 }

@@ -6,4 +6,6 @@ import com.qubit.blockchain.entity.Block;
 
 public interface BlockRepository extends JpaRepository<Block, String> {
 
+	public Block findByHashEquals(String hash);
+
 }

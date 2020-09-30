@@ -10,13 +10,19 @@ import com.qubit.blockchain.entity.Transaction;
 
 @Service
 public class TransactionServiceImpl implements TransactionService {
-	
+
 	@Autowired
 	private TransactionRepository transactionRepository;
 
 	@Override
 	public List<Transaction> findAll() {
 		List<Transaction> transactions = transactionRepository.findAll();
+		return transactions;
+	}
+
+	@Override
+	public List<Transaction> findByBlockHash(String block) {
+		List<Transaction> transactions = transactionRepository.findByBlock_hash(block);
 		return transactions;
 	}
 

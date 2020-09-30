@@ -10,8 +10,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name = "transaction")
 public class Transaction {
@@ -68,7 +66,6 @@ public class Transaction {
 
 	@ManyToOne(cascade = { CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH })
 	@JoinColumn(name = "block_hash")
-	@JsonIgnore
 	private Block block;
 
 	public Transaction() {

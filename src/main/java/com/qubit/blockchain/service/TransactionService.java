@@ -8,4 +8,6 @@ public interface TransactionService {
 	
 	public List<Transaction> findAll();
 
+	public List<Transaction> findByBlockHash(String block);
+
 }

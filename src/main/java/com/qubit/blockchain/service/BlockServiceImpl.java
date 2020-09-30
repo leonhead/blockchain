@@ -11,13 +11,19 @@ import com.qubit.blockchain.entity.Block;
 @Service
 public class BlockServiceImpl implements BlockService {
 
-	 @Autowired
-	 private BlockRepository blockRepository;
+	@Autowired
+	private BlockRepository blockRepository;
 
 	@Override
 	public List<Block> getBlocks() {
 		List<Block> blocks = blockRepository.findAll();
 		return blocks;
+	}
+
+	@Override
+	public Block getBlockByHash(String hash) {
+		Block block = blockRepository.findByHashEquals(hash);
+		return block;
 	}
 
 }
